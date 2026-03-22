@@ -2,7 +2,28 @@
   "version": 1,
   "author": "Bardea Moshe",
   "editor": "wokwi",
-  "parts": [ { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} } ],
-  "connections": [],
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -128.4,
+      "left": -169,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -80.2,
+      "left": 153.6,
+      "attrs": { "color": "green", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "led1:A", "uno:13", "orange", [ "v28.8", "h268.8", "v66.6" ] ],
+    [ "led1:C", "uno:GND.1", "black", [ "v57.6", "h269.5" ] ],
+    [ "btn1:1.r", "uno:5V", "green", [ "h115.4", "v297.6", "h-176" ] ],
+    [ "btn1:2.l", "uno:2", "green", [ "v29", "h82.9" ] ]
+  ],
   "dependencies": {}
 }
